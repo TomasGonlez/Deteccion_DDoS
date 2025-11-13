@@ -1,7 +1,19 @@
+#Carpetas que no deben subirse al repositorio
 data/
-results/
 artifacts/
+results/
+
+#Archivos temporales python
 __pycache__/
 *.pyc
+
+#Checkpoints de Jupyter
 .ipynb_checkpoints/
+
+#Entornos virtuales
+.env
 .venv/
+venv/
+
+#Archivos del sistema
+.DS_Store
