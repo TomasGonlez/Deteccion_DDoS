@@ -149,6 +149,42 @@ Deteccion_DDoS/
 ├── docker-compose.yml
 └── .gitignore
 
+📂 10. Sobre el dataset (no incluido en el repositorio)
+
+Este repositorio no incluye el dataset de tráfico de red por motivos de tamaño y buenas prácticas.
+
+Cada usuario debe:
+
+Crear las carpetas de datos (si no existen):
+
+mkdir -p data/raw
+mkdir -p data/processed
+
+
+Copiar manualmente los archivos CSV del dataset en:
+
+data/raw/
+
+
+Por ejemplo:
+
+data/raw/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv
+
+
+En los notebooks, los datos se leen usando rutas relativas como:
+
+import pandas as pd
+
+df = pd.read_csv("../data/raw/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv")
+
+
+⚠️ Si el dataset no está presente en data/raw/, algunos notebooks no podrán ejecutarse y mostrarán errores de archivo no encontrado.
+
+Además:
+
+La carpeta data/ está excluida del repositorio mediante .gitignore.
+
+Los datos quedan solo en la máquina local de cada usuario.
 📣 Notas importantes
 
 Los cambios realizados en Jupyter se guardan directamente en tu máquina, no dentro del contenedor.
