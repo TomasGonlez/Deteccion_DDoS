@@ -1,1 +1,19 @@
-"__pycache__/*.pyc.ipynb_checkpoints/.env.venv data/artifacts/results/"
+#Carpetas que no deben subirse al repositorio
+data/
+artifacts/
+results/
+
+#Archivos temporales python
+__pycache__/
+*.pyc
+
+#Checkpoints de Jupyter
+.ipynb_checkpoints/
+
+#Entornos virtuales
+.env
+.venv/
+venv/
+
+#Archivos del sistema
+.DS_Store
