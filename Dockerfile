@@ -6,7 +6,20 @@ WORKDIR /app
 COPY requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
+# -----------------------------
+# Añadir configuración permanente de IPython
+# -----------------------------
+
+# Crear directorio del perfil de IPython dentro del contenedor
+RUN mkdir -p /root/.ipython/profile_default
+
+# Copiar el archivo de configuración al contenedor
+COPY config/ipython/ipython_config.py /root/.ipython/profile_default/ipython_config.py
+
+
+# -----------------------------
 # Exponer puerto para Jupyter
+# -----------------------------
 EXPOSE 8888
 
 # Comando por defecto: iniciar Jupyter Notebook
