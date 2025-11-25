@@ -17,3 +17,17 @@ venv/
 
 #Archivos del sistema
 .DS_Store
+
+#Papeleras de Jupyter
+.Trash-*/
+.Trash-*
+
+#Archivos temporales del sistema
+*status
+*.tmp
+*.temp
+*.swp
+*.swo
+
+#Logs adicionales
+*.log
