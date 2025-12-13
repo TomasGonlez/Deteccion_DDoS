@@ -3,8 +3,9 @@ FROM python:3.10
 WORKDIR /app
 
 # Copiar requirements e instalar dependencias Python
-COPY requirements.txt /app/requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+COPY requirements.lock.txt /app/requirements.lock.txt
+RUN pip install --no-cache-dir --upgrade pip \
+ && pip install --no-cache-dir -r /app/requirements.lock.txt 
 
 # -----------------------------
 # Añadir configuración permanente de IPython
