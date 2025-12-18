@@ -54,7 +54,7 @@ Este comando:
 - Instala todas dependencias definidas en requirements.lock
 - Construye la imagen del entrono analítico
 
-> .[!WARNING]
+> [!WARNING]
 > La primera ejecución puede tardar algunos minutos.
 
 ---
@@ -197,12 +197,12 @@ import pandas as pd
 df = pd.read_csv("../data/raw/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv")
 ```
 
-> .[!WARNING]
+> [!WARNING]
 > Si el dataset no está presente en `data/raw`, aglunos notebooks no podrán ejecutarse y mostrarán errores de archivo no encontrrado.
 
 ---
 
-> .[!IMPORTANT]
+> [!IMPORTANT]
 > Los cambios realizados en Jupyter Notebook se guardan directamente en la máquina local del usuario.
 > La carpeta `data/raw/` no se versiona en el repositorio.
 > La carpeta `data/processed/` sí se incluye para garantizar la reproducibilidad del análisis.
