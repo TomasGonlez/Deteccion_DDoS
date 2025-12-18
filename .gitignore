@@ -1,33 +1,49 @@
-#Carpetas que no deben subirse al repositorio
-data/
-artifacts/
-results/
-
-#Archivos temporales python
-__pycache__/
-*.pyc
-
-#Checkpoints de Jupyter
+# ==================================================
+# JUPYTER / IPYTHON (basura local, en cualquier nivel)
+# ==================================================
 .ipynb_checkpoints/
+**/.ipynb_checkpoints/
+.Trash-*/
+.Trash-*
 
-#Entornos virtuales
+# ==================================================
+# DATASET (estrategia académica)
+# ==================================================
+# NO versionar datos crudos pesados
+data/raw/
+
+# Sí versionar datos procesados
+!data/processed/
+
+# Ignorar basura interna de data
+data/**/.ipynb_checkpoints/
+# ==================================================
+# PYTHON
+# ==================================================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ==================================================
+# ENTORNOS VIRTUALES
+# ==================================================
 .env
 .venv/
 venv/
 
-#Archivos del sistema
+# ==================================================
+# SISTEMA / TEMPORALES
+# ==================================================
 .DS_Store
-
-#Papeleras de Jupyter
-.Trash-*/
-.Trash-*
-
-#Archivos temporales del sistema
-*status
-*.tmp
-*.temp
+Thumbs.db
 *.swp
 *.swo
+*.tmp
+*.temp
+*~
+*status
 
-#Logs adicionales
+# ==================================================
+# LOGS
+# ==================================================
 *.log
