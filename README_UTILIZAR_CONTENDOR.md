@@ -204,7 +204,11 @@ df = pd.read_csv("../data/raw/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv")
 
 > [!IMPORTANT]
 > Los cambios realizados en Jupyter Notebook se guardan directamente en la máquina local del usuario.
+> 
 > La carpeta `data/raw/` no se versiona en el repositorio.
+>
 > La carpeta `data/processed/` sí se incluye para garantizar la reproducibilidad del análisis.
+>
 > El archivo `requirements.lock` define **exactamente** las versiones de dependencias utilizadas en el proyecto.
+>
 > El uso de Docker asegura que el proyecto pueda ejecutarse de forma consistente en cualquier sistema operativo compatible.
